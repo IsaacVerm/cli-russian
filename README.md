@@ -4,6 +4,8 @@ Explanation about goal, design, ... found on [Fractured](https://isaacverm.githu
 
 ## Setup
 
+### Regular setup
+
 Create Python3 [virtual environment](https://docs.python.org/3/tutorial/venv.html):
 
 ```
@@ -20,6 +22,14 @@ Install libraries specified in `requirements.txt`:
 
 ```
 pip install -r requirements.txt
+```
+
+### setuptools
+
+In separate virtual environment:
+
+```
+pip install --editable .
 ```
 
 ## Run
