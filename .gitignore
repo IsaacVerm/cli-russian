@@ -3,3 +3,4 @@ setupvenv/
 .vscode/*
 annotate.egg-info/
 __pycache__/
+nouns.tsv

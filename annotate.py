@@ -1,4 +1,5 @@
 import click
+import csv
 
 
 @click.command()
@@ -16,3 +17,10 @@ def annotate_noun(russian, root, english, case, gender, number):
     click.echo('Case is %s' % case)
     click.echo('Gender is %s' % gender)
     click.echo('Number is %s' % number)
+
+    with open('nouns.tsv', 'a') as out:
+        # tsvs use tabs as separators
+        tsv_writer = csv.writer(out, delimiter='\t')
+
+        # write noun as row
+        tsv_writer.writerow([russian, root, english, case, gender, number])
