@@ -11,16 +11,11 @@ import csv
 @click.option('--number', type=click.Choice(['sg', 'pl']), prompt="Specify the number of the noun", help="number can be either sg (singular) or pl (plural)")
 def annotate_noun(russian, root, english, case, gender, number):
     """Adds annotation for the Russian noun."""
-    click.echo('Russian noun is %s' % russian)
-    click.echo('Based on root noun %s' % root)
-    click.echo('English translation of this noun is %s' % english)
-    click.echo('Case is %s' % case)
-    click.echo('Gender is %s' % gender)
-    click.echo('Number is %s' % number)
-
     with open('nouns.tsv', 'a') as out:
         # tsvs use tabs as separators
         tsv_writer = csv.writer(out, delimiter='\t')
 
         # write noun as row
         tsv_writer.writerow([russian, root, english, case, gender, number])
+
+    click.echo("Annotation has been added to the nouns.tsv file.")
