@@ -1,2 +1,5 @@
 venv/
+setupvenv/
 .vscode/*
+annotate.egg-info/
+__pycache__/

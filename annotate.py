@@ -15,7 +15,3 @@ def annotate_noun(russian, root, english, case, gender, number):
     click.echo('Case is %s' % case)
     click.echo('Gender is %s' % gender)
     click.echo('Number is %s' % number)
-
-
-if __name__ == '__main__':
-    annotate_noun()
