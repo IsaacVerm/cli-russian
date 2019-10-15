@@ -23,3 +23,7 @@ pip install -r requirements.txt
 ```
 
 ## Run
+
+## Comments
+
+Uses [setuptools](https://click.palletsprojects.com/en/7.x/setuptools/#setuptools-integration).
